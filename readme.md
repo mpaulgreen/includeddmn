@@ -1,7 +1,47 @@
-Repository Init Content
-=======================
 
-Sample Project for proofing DMN using included models.
+- Request Method
+    - POST
+- Request URI
+```
+http://localhost:8080/kie-server/services/rest/server/containers/first_1.0.0-SNAPSHOT/dmn
+```
+- Request Body
+```
+{
+   "model-namespace":"https://kiegroup.org/dmn/_74683546-B1D7-4A6C-86C6-4A2268546C77",
+   "model-name":"ConsolidatedDMN",
+   "decision-name":[
+      
+   ],
+   "decision-id":[
+      
+   ],
+   "dmn-context":{
+       "by":{
+        "BankingYears":3,
+        "BankingYearsThreshold 1":5,
+        "BankingYearsThreshold 2":10,
+        "BankingYearsThreshold 3":15
+       },
+       "cs" :{
+        "Credit Score":3,
+        "Credit Score Threshold 1":5,
+        "Credit Score Threshold 2":10,
+        "Credit Score Threshold 3":15
+       },
+       "op" : {
+        "OperationYears":3,
+        "OperationYearsThreshold 1":5,
+        "OperationYearsThreshold 2":10,
+        "OperationYearsThreshold 3":15
+       }
+   }
+}
+  
+```
+
+- Result
+```
 {
   "type" : "SUCCESS",
   "msg" : "OK from container 'first_1.0.0-SNAPSHOT'",
@@ -68,3 +108,4 @@ Sample Project for proofing DMN using included models.
     }
   }
 }
+```
